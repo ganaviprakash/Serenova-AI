@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenova AI - Mental Wellness Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Calm Mode Overlay -->
+        <div id="calm-overlay" class="calm-overlay hidden">
+            <div class="breathing-circle">
+                <p id="breathing-text">Breathe</p>
+            </div>
+            <button id="close-calm-btn" class="glass-btn mt-4">Close Calm Mode</button>
+        </div>
+
+        <header class="app-header">
+            <div class="logo-container">
+                <span class="logo-icon">🌿</span>
+                <h1>Serenova AI</h1>
+            </div>
+            <button id="calm-mode-btn" class="glass-btn calm-btn">🍃 Calm Mode</button>
+        </header>
+
+        <main class="main-content">
+            <div class="glass-card chat-card">
+                <div class="card-header">
+                    <h2>How are you feeling today?</h2>
+                    <p class="subtitle">Share your thoughts, and I'll help you navigate them.</p>
+                </div>
+                
+                <div class="input-section">
+                    <textarea id="mood-input" placeholder="e.g., I feel stressed about exams..." rows="3"></textarea>
+                    <button id="analyze-btn" class="primary-btn">Analyze Mood</button>
+                </div>
+
+                <div id="results-container" class="results-section hidden">
+                    <div class="mood-indicator">
+                        <div class="indicator-header">
+                            <h3>Current State</h3>
+                            <span id="mood-score-badge" class="badge">Mood Score: 75</span>
+                        </div>
+                        <div class="status-box" id="status-box">
+                            <span id="status-icon" class="status-icon">😊</span>
+                            <span id="status-text">Positive</span>
+                        </div>
+                    </div>
+
+                    <div class="ai-response-box">
+                        <h3>AI Insight</h3>
+                        <p id="ai-response-text">Your response will appear here.</p>
+                    </div>
+
+                    <div class="suggestions-box">
+                        <h3>Wellness Suggestions</h3>
+                        <ul id="suggestions-list" class="suggestions-list">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card history-card">
+                <h2>Mood History</h2>
+                <div class="history-list" id="history-list">
+                    <p class="empty-state">Your mood history will appear here.</p>
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
